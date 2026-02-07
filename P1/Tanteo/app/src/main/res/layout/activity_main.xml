@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5">
+
+    <View
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="#00796B"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Puntuación"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/topBar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/topBar" />
+
+    <TextView
+        android:id="@+id/labelLocal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Local"
+        android:textColor="#757575"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/topBar" />
+
+    <TextView
+        android:id="@+id/tvPuntosLocal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textColor="#616161"
+        android:textSize="64sp"
+        app:layout_constraintEnd_toEndOf="@id/labelLocal"
+        app:layout_constraintStart_toStartOf="@id/labelLocal"
+        app:layout_constraintTop_toBottomOf="@id/labelLocal" />
+
+    <TextView
+        android:id="@+id/labelVisitante"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Visitante"
+        android:textColor="#757575"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/labelLocal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/guideline" />
+
+    <TextView
+        android:id="@+id/tvPuntosVisitante"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textColor="#616161"
+        android:textSize="64sp"
+        app:layout_constraintEnd_toEndOf="@id/labelVisitante"
+        app:layout_constraintStart_toStartOf="@id/labelVisitante"
+        app:layout_constraintTop_toBottomOf="@id/labelVisitante" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:columnCount="4"
+        android:rowCount="3"
+        android:useDefaultMargins="true"
+        app:layout_constraintBottom_toTopOf="@+id/btnEstadisticas"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvPuntosLocal">
+
+        <Button
+            android:id="@+id/btnLocal1"
+            style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+            android:layout_width="wrap_content"
+            android:backgroundTint="#D3D3D3"
+            android:text="+1"
+            android:textColor="@android:color/black" />
+        <TextView android:id="@+id/tvCountLocal1" android:text="0" android:padding="8dp" android:textColor="#BDBDBD"/>
+
+        <Button
+            android:id="@+id/btnVisit1"
+            style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:backgroundTint="#D3D3D3"
+            android:text="+1"
+            android:textColor="@android:color/black" />
+        <TextView android:id="@+id/tvCountVisit1" android:text="0" android:padding="8dp" android:textColor="#BDBDBD"/>
+
+        <Button android:id="@+id/btnLocal2" android:text="+2" style="@style/Widget.MaterialComponents.Button.UnelevatedButton" android:backgroundTint="#D3D3D3" android:textColor="@android:color/black"/>
+        <TextView android:id="@+id/tvCountLocal2" android:text="0" android:padding="8dp" android:textColor="#BDBDBD"/>
+
+        <Button android:id="@+id/btnVisit2" android:text="+2" style="@style/Widget.MaterialComponents.Button.UnelevatedButton" android:backgroundTint="#D3D3D3" android:textColor="@android:color/black" android:layout_marginLeft="40dp"/>
+        <TextView android:id="@+id/tvCountVisit2" android:text="0" android:padding="8dp" android:textColor="#BDBDBD"/>
+
+        <Button android:id="@+id/btnLocal3" android:text="+3" style="@style/Widget.MaterialComponents.Button.UnelevatedButton" android:backgroundTint="#D3D3D3" android:textColor="@android:color/black"/>
+        <TextView android:id="@+id/tvCountLocal3" android:text="0" android:padding="8dp" android:textColor="#BDBDBD"/>
+
+        <Button android:id="@+id/btnVisit3" android:text="+3" style="@style/Widget.MaterialComponents.Button.UnelevatedButton" android:backgroundTint="#D3D3D3" android:textColor="@android:color/black" android:layout_marginLeft="40dp"/>
+        <TextView android:id="@+id/tvCountVisit3" android:text="0" android:padding="8dp" android:textColor="#BDBDBD"/>
+    </GridLayout>
+
+    <Button
+        android:id="@+id/btnEstadisticas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="64dp"
+        android:backgroundTint="#D3D3D3"
+        android:text="ESTADÍSTICAS"
+        android:textColor="@android:color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

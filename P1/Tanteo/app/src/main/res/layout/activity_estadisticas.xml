@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F5F5F5">
+
+    <View android:layout_width="match_parent" android:layout_height="56dp" android:background="#00796B" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Estadísticas"
+        android:textAlignment="center"
+        android:textSize="22sp"
+        android:textColor="#757575"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="20dp"/>
+
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:text="Local" android:layout_marginStart="30dp" android:textColor="#9E9E9E" android:textSize="18sp"
+        android:layout_marginBottom="8dp"/>
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingHorizontal="30dp" android:paddingVertical="4dp">
+        <TextView android:layout_width="80dp" android:layout_height="wrap_content" android:text="Tiros de 1:" />
+        <ProgressBar android:id="@+id/pbLocal1" style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+            android:progressTint="#E91E63" android:max="30" />
+        <TextView android:id="@+id/tvStatLocal1" android:layout_width="30dp" android:layout_height="wrap_content" android:text="0" android:textAlignment="viewEnd" />
+    </LinearLayout>
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingHorizontal="30dp" android:paddingVertical="4dp">
+        <TextView android:layout_width="80dp" android:layout_height="wrap_content" android:text="Tiros de 2:" />
+        <ProgressBar android:id="@+id/pbLocal2" style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+            android:progressTint="#E91E63" android:max="30" />
+        <TextView android:id="@+id/tvStatLocal2" android:layout_width="30dp" android:layout_height="wrap_content" android:text="0" android:textAlignment="viewEnd" />
+    </LinearLayout>
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingHorizontal="30dp" android:paddingVertical="4dp">
+        <TextView android:layout_width="80dp" android:layout_height="wrap_content" android:text="Tiros de 3:" />
+        <ProgressBar android:id="@+id/pbLocal3" style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+            android:progressTint="#E91E63" android:max="30" />
+        <TextView android:id="@+id/tvStatLocal3" android:layout_width="30dp" android:layout_height="wrap_content" android:text="0" android:textAlignment="viewEnd" />
+    </LinearLayout>
+
+    <Space android:layout_width="match_parent" android:layout_height="32dp"/>
+
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:text="Visitante" android:layout_marginStart="30dp" android:textColor="#9E9E9E" android:textSize="18sp"
+        android:layout_marginBottom="8dp"/>
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingHorizontal="30dp" android:paddingVertical="4dp">
+        <TextView android:layout_width="80dp" android:layout_height="wrap_content" android:text="Tiros de 1:" />
+        <ProgressBar android:id="@+id/pbVisit1" style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+            android:progressTint="#E91E63" android:max="30" />
+        <TextView android:id="@+id/tvStatVisit1" android:layout_width="30dp" android:layout_height="wrap_content" android:text="0" android:textAlignment="viewEnd" />
+    </LinearLayout>
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingHorizontal="30dp" android:paddingVertical="4dp">
+        <TextView android:layout_width="80dp" android:layout_height="wrap_content" android:text="Tiros de 2:" />
+        <ProgressBar android:id="@+id/pbVisit2" style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+            android:progressTint="#E91E63" android:max="30" />
+        <TextView android:id="@+id/tvStatVisit2" android:layout_width="30dp" android:layout_height="wrap_content" android:text="0" android:textAlignment="viewEnd" />
+    </LinearLayout>
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingHorizontal="30dp" android:paddingVertical="4dp">
+        <TextView android:layout_width="80dp" android:layout_height="wrap_content" android:text="Tiros de 3:" />
+        <ProgressBar android:id="@+id/pbVisit3" style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+            android:progressTint="#E91E63" android:max="30" />
+        <TextView android:id="@+id/tvStatVisit3" android:layout_width="30dp" android:layout_height="wrap_content" android:text="0" android:textAlignment="viewEnd" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnVolver"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#D3D3D3"
+        android:text="VOLVER"
+        android:textColor="@android:color/black" />
+
+</LinearLayout>
