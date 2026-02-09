@@ -1,16 +1,15 @@
 plugins {
     alias(libs.plugins.android.application)
-    alias(libs.plugins.kotlin.android)
 }
 
 android {
-    namespace = "com.example.tanteo"
+    namespace = "com.example.basicoprimero"
     compileSdk {
         version = release(36)
     }
 
     defaultConfig {
-        applicationId = "com.example.tanteo"
+        applicationId = "com.example.basicoprimero"
         minSdk = 24
         targetSdk = 36
         versionCode = 1
@@ -31,9 +30,6 @@ android {
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
-    }
-    kotlinOptions {
-        jvmTarget = "11"
     }
     buildFeatures {
         viewBinding = true
