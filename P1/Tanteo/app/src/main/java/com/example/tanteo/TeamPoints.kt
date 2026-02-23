@@ -3,7 +3,7 @@ package com.example.tanteo
 import android.os.Parcel
 import android.os.Parcelable
 
-data class TeamPoints(var de1: Int, val de2: Int, val de3: Int) : Parcelable {
+data class TeamPoints(var de1: Int, var de2: Int, var de3: Int) : Parcelable {
     val total get() = de1 + 2*de2 + 3*de3
 
     constructor(parcel : Parcel) : this(
