@@ -1,13 +1,12 @@
 package es.imovil.recyclerviewprac
 
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import es.imovil.recyclerviewprac.databinding.ItemLayoutBinding
 
-class RecyclerViewAdapter(private val courses: MutableList<Course>) :
-    RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder>() {
+class CourseAdapter : ListAdapter<Course, CourseAdapter.ViewHolder>(Course.DIFF_CALLBACK) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val itemBinding = ItemLayoutBinding.inflate(LayoutInflater.from(parent.context), parent, false)
@@ -15,22 +14,14 @@ class RecyclerViewAdapter(private val courses: MutableList<Course>) :
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        val course = courses[position]
+        val course = getItem(position)
         holder.bind(course)
     }
 
-    override fun getItemCount() = courses.size
-
-    fun addCourse(course: Course): Unit {
-        courses.add(course)
-        notifyDataSetChanged()
-    }
-
-    class ViewHolder(val itemBinding: ItemLayoutBinding) :
+    class ViewHolder(private val itemBinding: ItemLayoutBinding) :
         RecyclerView.ViewHolder(itemBinding.root) {
 
         fun bind(course: Course) {
-            // Inicializar los dos TextView
             itemBinding.courseText.text = course.asignatura
             itemBinding.teacherText.text = course.profesor
         }
